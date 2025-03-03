@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHO SRQ-20 App - Goa</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="Icon.jpg">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(() => console.log("Service Worker Registered"))
+                .catch(error => console.log("Service Worker Registration Failed:", error));
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .question {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        select {
+            font-size: 18px;
+            padding: 10px;
+            width: 100%;
+        }
+        button {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 4px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .red-text {
+            color: red;
+        }
+        .green-text {
+            color: green;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1: Introduction & Resources -->
+    <div id="page1" class="container">
+        <h1>WHO SRQ-20 App - Goa</h1>
+        <h2>Simple Scale for Psychological Distress</h2>
+        <img src="Icon.jpg" alt="WHO SRQ-20" width="100%">
+        <p>
+            The WHO SRQ-20 is a screening tool developed by the **World Health Organization** to identify psychiatric disturbance.
+            This version has been adapted for the Goan population.
+        </p>
+        <h3>Instructions:</h3>
+        <ul>
+            <li>Answer **YES or NO** to each question based on the last **30 days**.</li>
+            <li>A **YES = 1** and **NO = 0**.</li>
+            <li>A total score of **8 or more** indicates psychiatric disturbance.</li>
+            <li>Confidentiality is assured. Be honest with your responses.</li>
+        </ul>
+        <h3>Resources:</h3>
+        <p><strong>Download the following WHO SRQ-20 Resources:</strong></p>
+        <a href="SRQ_RHTC_PAPER.pdf" target="_blank">📄 SRQ RHTC Paper (PDF)</a><br><br>
+        <a href="WHOSRQ_GUIDE.pdf" target="_blank">📄 WHO SRQ-20 Guide (PDF)</a><br><br>
+        <button onclick="showPage(2)">START QUESTIONNAIRE</button>
+    </div>
+
+    <!-- Page 2: Questionnaire -->
+    <div id="page2" class="container hidden">
+        <h2>WHO SRQ-20 Questionnaire</h2>
+        <form id="srqForm">
+            <div id="questions"></div>
+            <button type="button" onclick="evaluateSRQ()">Submit & Evaluate</button>
+        </form>
+        <div id="result"></div>
+        <button onclick="showPage(1)">Back to Instructions</button>
+    </div>
+
+    <script src="app.js"></script>
+
+    <script>
+        function showPage(pageNumber) {
+            document.getElementById('page1').classList.add('hidden');
+            document.getElementById('page2').classList.add('hidden');
+            document.getElementById('page' + pageNumber).classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "WHO SRQ-20 App",
+  "short_name": "SRQ-20",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [
+    { "src": "Icon.jpg", "sizes": "192x192", "type": "image/png" }
+  ]
+}
