@@ -39,6 +39,8 @@ window.onload = function () {
 };
 
 function evaluateSRQ() {
+    console.log("Running evaluateSRQ()"); // ✅ Debugging log to check if function runs
+
     let totalScore = 0;
     let allAnswered = true;
 
@@ -54,9 +56,12 @@ function evaluateSRQ() {
     const resultDiv = document.getElementById("result");
 
     if (!allAnswered) {
+        console.log("Not all questions are answered!"); // ✅ Debugging log for missing answers
         resultDiv.innerHTML = `<p class="red-text"><strong>Please answer all questions before evaluating.</strong></p>`;
         return;
     }
+
+    console.log(`TOTAL SCORE: ${totalScore}`); // ✅ Debugging log for total score
 
     let resultText = `<p><strong>TOTAL SCORE = ${totalScore}</strong></p>`;
 
@@ -69,4 +74,4 @@ function evaluateSRQ() {
     }
 
     resultDiv.innerHTML = resultText;
-} // ✅ Closing bracket is correctly placed
+} // ✅ Closing bracket is correctly placed.
