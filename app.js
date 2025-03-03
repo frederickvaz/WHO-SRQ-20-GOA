@@ -58,9 +58,15 @@ function evaluateSRQ() {
         return;
     }
 
+    let resultText = `<p><strong>TOTAL SCORE = ${totalScore}</strong></p>`;
+
     if (totalScore >= 8) {
-        resultDiv.innerHTML = `<p class="red-text"><strong>Psychiatric disturbance present - Refer for psychiatric evaluation.</strong></p>`;
+        resultText += `<p class="red-text"><strong>Psychiatric Disturbance Present</strong></p>`;
+        resultText += `<p class="red-text"><strong>Action to be Taken: Refer for Psychiatric Evaluation</strong></p>`;
     } else {
-        resultDiv.innerHTML = `<p class="green-text"><strong>Psychiatric disturbance absent - Reassure patient.</strong></p>`;
+        resultText += `<p class="green-text"><strong>Psychiatric Disturbance Absent</strong></p>`;
+        resultText += `<p class="green-text"><strong>Action to be Taken: Reassure Patient</strong></p>`;
     }
+
+    resultDiv.innerHTML = resultText;
 }
