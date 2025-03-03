@@ -69,4 +69,4 @@ function evaluateSRQ() {
     }
 
     resultDiv.innerHTML = resultText;
-} // ✅ Added missing closing bracket
+} 
