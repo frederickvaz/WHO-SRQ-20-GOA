@@ -70,6 +70,7 @@
             border-radius: 8px;
             font-size: 20px;
             font-weight: bold;
+            text-align: center;
         }
         .red-text {
             color: red;
@@ -80,17 +81,19 @@
         .hidden {
             display: none;
         }
+        .justified-text {
+            text-align: justify;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Page 1: Introduction & Resources -->
     <div id="page1" class="container">
         <h1>WHO SRQ-20 App - Goa</h1>
-        <h2>Simple Scale for screening of Psychiatric disturbance</h2>
+        <h2>Simple Scale for Psychological Distress</h2>
         <img src="Icon.jpg" alt="WHO SRQ-20" width="100%">
-        <p>
-            The WHO SRQ-20 is a screening tool developed by the **World Health Organization** to identify psychiatric disturbance.
+        <p class="justified-text">
+            The WHO SRQ-20 is a screening tool developed by the <strong>World Health Organization</strong> to identify psychiatric disturbance. 
             This version has been adapted for the Goan population in Konkani.
         </p>
         <h3>Instructions:</h3>
@@ -101,13 +104,11 @@
             <li>Confidentiality is assured. Be honest with your responses.</li>
         </ul>
         <h3>Resources:</h3>
-        <p><strong>Download the following WHO SRQ-20 Resources:</strong></p>
         <a href="SRQ_RHTC_PAPER.pdf" target="_blank">📄 SRQ RHTC Paper (PDF)</a><br><br>
         <a href="WHOSRQ_GUIDE.pdf" target="_blank">📄 WHO SRQ-20 Guide (PDF)</a><br><br>
         <button onclick="showPage(2)">START QUESTIONNAIRE</button>
     </div>
 
-    <!-- Page 2: Questionnaire -->
     <div id="page2" class="container hidden">
         <h2>WHO SRQ-20 Questionnaire</h2>
         <form id="srqForm">
