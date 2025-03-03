@@ -69,4 +69,4 @@ function evaluateSRQ() {
     }
 
     resultDiv.innerHTML = resultText;
-} 
+} // ✅ Closing bracket is correctly placed
