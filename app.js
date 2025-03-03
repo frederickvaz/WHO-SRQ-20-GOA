@@ -66,10 +66,10 @@ function evaluateSRQ() {
     let resultText = `<p><strong>TOTAL SCORE = ${totalScore}</strong></p>`;
 
     if (totalScore >= 8) {
-        resultText += `<p class="red-text"><strong>Psychiatric Disturbance Present</strong></p>`;
+        resultText += `<p class="red-text"><strong>SRQ Score >= 8. Psychiatric Disturbance Present</strong></p>`;
         resultText += `<p class="red-text"><strong>Action to be Taken: Refer for Psychiatric Evaluation</strong></p>`;
     } else {
-        resultText += `<p class="green-text"><strong>Psychiatric Disturbance Absent</strong></p>`;
+        resultText += `<p class="green-text"><strong>SRQ Score < 8. Psychiatric Disturbance Absent</strong></p>`;
         resultText += `<p class="green-text"><strong>Action to be Taken: Reassure Patient</strong></p>`;
     }
 
