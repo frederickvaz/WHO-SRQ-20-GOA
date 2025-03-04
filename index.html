@@ -32,6 +32,12 @@
             font-weight: bold;
             margin-top: 5px;
         }
+        .developer-info {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #444;
+        }
         .container {
             max-width: 600px;
             margin: auto;
@@ -84,6 +90,12 @@
         .justified-text {
             text-align: justify;
         }
+        .feedback {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -91,6 +103,12 @@
     <div id="page1" class="container">
         <h1>WHO SRQ-20 App - Goa</h1>
         <h2>Simple Scale for Screening for Psychiatric Disturbance</h2>
+
+        <!-- Developer Information -->
+        <p class="developer-info">App Developed By:</p>
+        <p class="developer-info">Dr. Frederick Vaz, Community Medicine</p>
+        <p class="developer-info">Goa Medical College</p>
+
         <img src="Icon.jpg" alt="WHO SRQ-20" width="100%">
         <p class="justified-text">
             The WHO SRQ-20 is a screening tool developed by the <strong>World Health Organization</strong> to identify psychiatric disturbance. 
@@ -117,6 +135,9 @@
         </form>
         <div id="result"></div>
         <button onclick="showPage(1)">Back to Instructions</button>
+
+        <!-- Feedback Section -->
+        <p class="feedback">Give feedback to: <a href="mailto:frederickvaz@rediffmail.com">frederickvaz@rediffmail.com</a></p>
     </div>
 
     <script src="app.js"></script>
